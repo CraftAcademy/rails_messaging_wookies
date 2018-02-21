@@ -16,10 +16,16 @@ gem 'sass-rails', '~> 5.0'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
+group :test do
+  gem 'rspec-rails'
+  gem 'cucumber-rails'
+end
+
 group :development do
   gem 'pry-byebug'
   gem 'spring'
   gem 'web-console', '~> 2.0'
+  gem 'database_cleaner'
 end
 
 group :production do
