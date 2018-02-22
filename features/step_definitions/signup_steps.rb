@@ -14,6 +14,6 @@ Then("He clicks {string}") do |button|
   click_on(button)
 end
 
-Then("He sees message {string}") do |string|
-  expect(page).to have_content string
+Then("He sees message {string}") do |message|
+  expect(page).to have_content(message)
 end
