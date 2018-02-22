@@ -10,7 +10,7 @@ Feature: User can sign up
     And He fills in "Name" with "Fleur"
     And He fills in "Email" with "wookie@email.com"
     And He fills in "Password" with "password11"
-    And He fills in "Password_confirmation" with "password11"
+    And He fills in "Password confirmation" with "password11"
     And He clicks "Create"
     And He sees message "Welcome! You have signed up successfully."
 

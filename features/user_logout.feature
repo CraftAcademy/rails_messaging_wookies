@@ -3,15 +3,11 @@ Feature: User logout
   In order to exit my account
   I want to be able to logout
 
-  Background:
-    Given I am on the account page
-    And following user is logged in
+  Scenario:
+    Given following user exist
       | name        | email                 | password |
       | Antonella   | antonella@test.com    | password |
-
-  Scenario:
-    Then show me the page
+    And I am logged in as "Antonella"
+    And I am on the landing-page
     When I click on "Logout"
-    And I should see the page
-    And I should see message "Bye, Antonella"
-    Then I am logged out
+    And I should see message "Signed out successfully."
