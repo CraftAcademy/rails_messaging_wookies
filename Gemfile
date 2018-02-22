@@ -34,7 +34,6 @@ group :development do
   gem 'pry-byebug'
   gem 'spring'
   gem 'web-console', '~> 2.0'
-  gem 'database_cleaner'
 end
 
 group :production do

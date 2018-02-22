@@ -10,7 +10,8 @@ Feature: User logout
       | Antonella   | antonella@test.com    | password |
 
   Scenario:
-    When I click "Logout"
+    Then show me the page
+    When I click on "Logout"
+    And I should see the page
+    And I should see message "Bye, Antonella"
     Then I am logged out
-    And show me the page
-    And I should see "Bye, Antonella"
