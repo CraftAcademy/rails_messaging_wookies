@@ -4,7 +4,7 @@ Feature: User logout
   I want to be able to logout
 
   Background:
-    Given I am on the landing-page
+    Given I am on the account page
     And following user is logged in
       | name        | email                 | password |
       | Antonella   | antonella@test.com    | password |
