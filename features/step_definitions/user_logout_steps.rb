@@ -14,7 +14,7 @@ When("I click on {string}") do |string|
   #expect(page).to have_current_path(destroy_user_session)
 end
 
-Then("Show me the main page") do
+Then("I should see the page") do
   save_and_open_page
 end
 
