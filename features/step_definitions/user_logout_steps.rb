@@ -1,7 +1,8 @@
 Given("following user is logged in") do |table|
   table.hashes.each do |user|
     FactoryBot.create(:user, user)
-    login_as(user, :scope => :user, :run_callbacks => false)
+    user = User.find_by(name: name)
+    login_as(user, scope: :user)
   end
 end
 
@@ -18,10 +19,10 @@ Then("I should see the page") do
   save_and_open_page
 end
 
-Then("I should see message {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I should see message {string}") do |message|
+  expect(page).to have_content message
 end
 
 Then("I am logged out") do
-  pending # Write code here that turns the phrase above into concrete actions
+  pending
 end
