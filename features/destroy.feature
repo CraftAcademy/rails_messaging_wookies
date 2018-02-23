@@ -21,3 +21,9 @@ Scenario: Deleting a message
   And I click "View" link
   And I click "Move to trash" link
   Then I should have "0" messages
+  Given I am logged in as "David"
+  And I am on the "Inbox" page
+  When I click "Trash" link
+  And I click "View" link
+  And I click "Untrash" link
+  Then I should see "Lorem ipsum..."
