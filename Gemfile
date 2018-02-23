@@ -20,6 +20,11 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   gem 'rspec-rails'
   gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'pry-rails'
+  gem 'shoulda-matchers'
+  gem 'launchy'
 end
 
 group :development do
