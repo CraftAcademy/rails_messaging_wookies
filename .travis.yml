@@ -1,14 +1,15 @@
 language: ruby
 cache: bundler
 rvm:
-  - 2.4.3
+- 2.4.3
 services:
-  - postgresql
+- postgresql
 before_script:
-  - psql -c 'create database rails_messaging_test;' -U postgres
-  - bundle exec rails db:migrate
+- psql -c 'create database rails_messaging_test;' -U postgres
+- bundle exec rails db:migrate
 script:
-  - bundle exec rails ci:tests
+- bundle exec rspec
+- bundle exec cucumber
 deploy:
   provider: heroku
   api_key:
