@@ -5,14 +5,14 @@ Feature: User login
 
   Background:
     Given following user exist
-      | name        | email                 | password |
-      | Antonella   | antonella@test.com    | password |
+      | name    | email             | password |
+      | David   | david@test.com    | password |
 
   Scenario:
     Given I am on the landing-page
     And I click "Login"
-    When I fill in "Email" with "antonella@test.com"
+    When I fill in "Email" with "david@test.com"
     And I fill in "Password" with "password"
     And I click "Log in" button
     Given I am logged in
-    And I should see "Hello, Antonella"
+    And I should see "Hello, David"
