@@ -14,5 +14,5 @@ Feature: User login
     When I fill in "Email" with "david@test.com"
     And I fill in "Password" with "password"
     And I click "Log in" button
-    Given I am logged in
-    And I should see "Hello, David"
+    Given I am logged in as "David"
+    Then I should see "Hello, David"

@@ -25,9 +25,9 @@ Given("I am logged in") do
   login_as(user, :scope => :user, :run_callbacks => false)
 end
 
-Given("I am logged in as {string}") do |name|
-  user = User.find_by_name(name)
-  login_as(user, scope: :user)
+Given(/^I am logged in as "([^"]*)"$/) do |name|
+  @user = User.find_by(name: name)
+  login_as(@user, scope: :user)
 end
 
 Then("show me the page") do
